@@ -1,6 +1,6 @@
 # 🌊 Coastal Threat Alert System  
 
-A hackathon project to protect coastal communities by predicting storms, detecting algal blooms, and sending real-time SMS alerts to registered users.  
+A solution to protect coastal communities by predicting storms, detecting algal blooms, and sending real-time SMS alerts to registered users.  
 
 ---
 
@@ -16,7 +16,7 @@ This project combines **Machine Learning, Deep Learning, and AI assistance** to 
 - Users register with **Name, Email, Phone Number, Password**.  
 - Phone numbers are stored securely in the database.  
 - Registered users automatically receive **SMS alerts** whenever a natural threat is detected.  
-- **Tech:** Node.js/Python backend + SQLite/Firebase DB + Twilio/Fast2SMS API.  
+- **Tech:** Python backend + SQLite / MongoDB + Twilio / Fast2SMS API.  
 
 ---
 
@@ -65,11 +65,11 @@ This project combines **Machine Learning, Deep Learning, and AI assistance** to 
 
 ## 🛠️ Tech Stack  
 
-- **Frontend:** React + Tailwind + Recharts  
-- **Backend:** Python (FastAPI/Flask) or Node.js  
+- **Frontend:** React + Tailwind 
+- **Backend:** Python (FastAPI/Flask) 
 - **ML Model:** Isolation Forest / Random Forest (scikit-learn)  
 - **DL Model:** CNN (TensorFlow / PyTorch, MobileNet/ResNet)  
-- **Database:** SQLite / Firebase / MongoDB  
+- **Database:** SQLite / MongoDB  
 - **SMS Alerts:** Twilio / Fast2SMS API  
 
 ---
@@ -80,7 +80,6 @@ This project combines **Machine Learning, Deep Learning, and AI assistance** to 
 2. On **Storm Prediction page**, ML model predicts risk → if “High” → SMS alerts sent.  
 3. On **Algal Bloom page**, DL model classifies image → if bloom → SMS alerts sent.  
 4. On **AI Assistant page**, users get multilingual safety advice.  
-5. Judges can see alerts history & SMS proof in console/logs.  
 
 ---
 
