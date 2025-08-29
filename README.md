@@ -1,107 +1,94 @@
-# 🌊 Coastal Threat Alert System
+# 🌊 Coastal Threat Alert System  
 
-## 📝 Problem Statement
-Coastal communities are highly vulnerable to **erosion, flooding, storm surges, and mangrove loss**.  
-Most residents often **receive warnings too late**, leading to loss of homes, boats, farmlands, and even lives.  
-There is no simple, community-driven, real-time alert system that combines **local observations** with **scientific data** to prevent such disasters.
+A hackathon project to protect coastal communities by predicting storms, detecting algal blooms, and sending real-time SMS alerts to registered users.  
 
 ---
 
-## 💡 Our Solution
-We propose a **Coastal Threat Alert System** that allows communities to:  
-1. **Report threats** (erosion, flooding, debris, mangrove cutting) by submitting **photos + location**.  
-2. **Verify risks** by combining reports with **live weather and tide API data**.  
-3. **Issue alerts** to people in at-risk areas via the app (and later via SMS/notifications).  
+## ⚡ Overview  
 
-This creates a **community-driven early warning network**, where residents become the first line of defense against coastal threats.
+This project combines **Machine Learning, Deep Learning, and AI assistance** to build a web-based platform for early warning and community support against coastal threats.  
 
 ---
 
-## 🎯 Objectives
-- Enable **fast and easy reporting** of coastal threats by local users.  
-- Build a **real-time dashboard** for authorities/NGOs to view threats on a map.  
-- Provide **early alerts** to nearby residents when threats are verified.  
-- Encourage **community participation** by gamifying contributions.  
+## 📑 Website Pages  
+
+### 1. 🔐 **Sign Up / Login**  
+- Users register with **Name, Email, Phone Number, Password**.  
+- Phone numbers are stored securely in the database.  
+- Registered users automatically receive **SMS alerts** whenever a natural threat is detected.  
+- **Tech:** Node.js/Python backend + SQLite/Firebase DB + Twilio/Fast2SMS API.  
 
 ---
 
-## 🧩 Key Features (MVP)
-- **User App:**  
-  - Login (Firebase Authentication)  
-  - Submit report (photo, description, geotag)  
-  - View current alerts in the region  
-
-- **Admin Dashboard:**  
-  - Map of reports with status  
-  - Overlay of weather & tide data  
-  - Alert creation & broadcast  
-
-- **Backend:**  
-  - Firebase Firestore for storage  
-  - OpenWeatherMap + WorldTides API integration  
-  - Simple rules for verifying & issuing alerts  
+### 2. 🏠 **Home / Introduction**  
+- Explains the **problem (coastal threats)**, the **impact on lives & ecosystems**, and our **solution approach**.  
+- 3 main solution cards:  
+  1. Storm Prediction 🌪️  
+  2. Algal Bloom Detection 🐟  
+  3. AI Safety Assistant 🤖  
+- Button → *“Start Monitoring”* → leads to Storm Prediction page.  
 
 ---
 
-## 🌍 Target Impact
-- **Fisherfolk:** Safer fishing trips with tide/flood alerts.  
-- **Farmers:** Protection of coastal farmland from sudden flooding.  
-- **Residents:** Early evacuation during storm surges.  
-- **Local authorities/NGOs:** Faster disaster response, verified by community data.  
-
-This system strengthens **resilience** and **community ownership** of coastal safety.  
-
----
-
-## 🔧 Tech Stack (Proposed)
-- **Frontend:** React / React Native (Expo)  
-- **Dashboard:** React + Mapbox / Leaflet  
-- **Backend:** Firebase (Firestore, Storage, Cloud Functions)  
-- **APIs:** OpenWeatherMap (weather), WorldTides (tide levels)  
+### 3. 🌪️ **Storm Prediction (ML Model + Auto-SMS)**  
+- **Input:** Weather features (Wind Speed, Air Pressure, Tide Level, Rainfall).  
+- **Model:** ML algorithm (Isolation Forest / Random Forest).  
+- **Output:**  
+  - Risk Level: High / Medium / Low.  
+  - **Explainability:** Shows which features caused the alert (e.g., *High wind + Low pressure*).  
+  - Historical Trend Chart of last 24h simulated data.  
+- **Auto-SMS Alert:**  
+  - If “High Risk” → SMS sent automatically to all registered users in **English + Gujarati/Hindi**.  
 
 ---
 
-## 🕒 48-Hour Hackathon Plan
-- **Day 1:**  
-  - Setup Firebase, build report form, save reports in Firestore.  
-  - Display reports on dashboard map.  
-
-- **Day 2:**  
-  - Integrate weather/tide API.  
-  - Add alert creation workflow.  
-  - Display alerts feed in user app.  
-  - Deploy + prepare demo.  
+### 4. 🐠 **Algal Bloom Detection (DL Model + Auto-SMS)**  
+- **Input:** Upload an image of sea (satellite/mock).  
+- **Model:** CNN (ResNet / MobileNet) trained to classify *Normal* vs. *Algal Bloom*.  
+- **Output:**  
+  - Result: *“Algal Bloom Detected (72% confidence)”*.  
+  - Historical Trend Chart (last 7 days simulated).  
+- **Auto-SMS Alert:**  
+  - If bloom probability > threshold → SMS alert sent to all registered users in multiple languages.  
 
 ---
 
-## 🚀 Future Enhancements
-- Push notifications & SMS alerts for remote villages.  
-- AI-based auto-validation of images (erosion/flood detection).  
-- Historical trend analysis using satellite imagery.  
-- Regional language support for inclusivity.  
+### 5. 🤖 **AI Safety Assistant**  
+- Chatbot page that guides users with **safety measures** during storms, floods, or algal blooms.  
+- **Examples:**  
+  - User: *“What should I do if cyclone alert is high?”*  
+  - Bot: *“Stay indoors, keep emergency kit ready, avoid fishing, follow evacuation orders.”*  
+- **Supports English + Gujarati/Hindi** (user can select language).  
+- Backend: Rule-based Q&A / small AI model.  
 
 ---
 
-## 👥 Team Roles
-- **Frontend:** Build user app for reporting & alerts.  
-- **Dashboard:** Map visualization & admin workflow.  
-- **Backend:** Firebase setup, API integration.  
-- **Docs & Demo:** Wireframes, presentation, video demo.  
+## 🛠️ Tech Stack  
+
+- **Frontend:** React + Tailwind + Recharts  
+- **Backend:** Python (FastAPI/Flask) or Node.js  
+- **ML Model:** Isolation Forest / Random Forest (scikit-learn)  
+- **DL Model:** CNN (TensorFlow / PyTorch, MobileNet/ResNet)  
+- **Database:** SQLite / Firebase / MongoDB  
+- **SMS Alerts:** Twilio / Fast2SMS API  
 
 ---
 
-## 📽 Demo Flow (for judges)
-1. User submits photo of flooding with GPS location.  
-2. Admin dashboard shows the report + live tide/weather data.  
-3. Admin verifies and issues an alert.  
-4. Nearby users receive the alert in their feed.  
+## 🚀 Execution Flow  
+
+1. User **signs up** with phone → added to DB.  
+2. On **Storm Prediction page**, ML model predicts risk → if “High” → SMS alerts sent.  
+3. On **Algal Bloom page**, DL model classifies image → if bloom → SMS alerts sent.  
+4. On **AI Assistant page**, users get multilingual safety advice.  
+5. Judges can see alerts history & SMS proof in console/logs.  
 
 ---
 
-## 🌟 Why This Project?
-- **Impactful:** Saves lives and property by enabling faster response.  
-- **Feasible:** Uses simple tech stack (Firebase + React + APIs).  
-- **Scalable:** Start small in one village, expand to entire coastlines.  
-- **Innovative:** Blends **community participation** with **scientific data**.  
+## 🎯 Impact  
+
+- Saves lives by providing **early warnings**.  
+- Protects marine ecosystems by detecting **algal blooms** early.  
+- Builds **community resilience** with AI guidance + multilingual alerts.  
+- Scalable for disaster management agencies, NGOs, and local communities.  
 
 ---
