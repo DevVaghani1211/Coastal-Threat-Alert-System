@@ -1,0 +1,133 @@
+.homeContainer {
+  font-family: system-ui, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  min-height: 100vh;
+}
+
+/* Hero Section */
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.heroTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.heroSubtitle {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  opacity: 0.9;
+}
+
+.heroButtons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.ctaButton {
+  padding: 0.8rem 1.5rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: #10b981;
+  color: white;
+}
+
+.primary:hover {
+  background: #059669;
+}
+
+.secondary {
+  border: 2px solid white;
+  color: white;
+}
+
+.secondary:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Waves */
+.waveAnimation {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+}
+
+.wave {
+  position: absolute;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  animation: wave 6s linear infinite;
+}
+
+.wave1 { bottom: 0; animation-delay: 0s; }
+.wave2 { bottom: 10px; animation-delay: -2s; }
+.wave3 { bottom: 20px; animation-delay: -4s; }
+
+@keyframes wave {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+/* Features Section */
+.featuresSection {
+  padding: 4rem 2rem;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.sectionTitle {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.featuresGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.featureCard {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* CTA Section */
+.ctaSection {
+  text-align: center;
+  padding: 4rem 2rem;
+}
+
+.large {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+}

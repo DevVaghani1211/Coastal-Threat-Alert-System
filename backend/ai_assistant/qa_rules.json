@@ -1,0 +1,12 @@
+{
+  "cyclone_high": {
+    "en": "Cyclone Alert (High): Stay indoors, charge phones, keep emergency kit (water, torch, medicines). Avoid fishing and coastal areas.",
+    "hi": "चक्रवात चेतावनी (उच्च): घर के अंदर रहें, फोन चार्ज रखें, आपातकालीन किट तैयार रखें। मछली पकड़ने और तट पर जाने से बचें।",
+    "gu": "ચક્રવાત ચેતવણી (ઉચ્ચ): ઘરમાં રહો, ફોન ચાર્જ રાખો, ઈમરજન્સી કિટ તૈયાર રાખો. માછીમારી અને દરિયાકાંઠે જવાથી બચો."
+  },
+  "algal_bloom": {
+    "en": "Algal Bloom: Avoid entering water, do not consume fish from affected area, report to local authorities.",
+    "hi": "शैवाल प्रस्फुटन: पानी में न जाएं, प्रभावित क्षेत्र की मछली न खाएं, स्थानीय प्राधिकरण को सूचित करें।",
+    "gu": "શૈવાલ વૃદ્ધિ: પાણીમાં ન જશો, અસરગ્રસ્ત વિસ્તારની માછલી ન ખાઓ, સત્તાવાળાઓને જાણ કરો."
+  }
+}
